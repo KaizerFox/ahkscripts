@@ -1,4 +1,4 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
@@ -41,6 +41,8 @@ messages =
 	x3
 	TwT
 	;-;
+	\~
+	<3
 )
 
 StringSplit, messlist, messages, `n,`r
@@ -63,29 +65,34 @@ Pause::Suspend
 	nya := true
 	i := i + 1
 	if (i = 5)
+	{
+		Random, Pickthis, 1, %messlist0%
+		thismess := messlist%PickThis%
+		if (thismess = "\~")
 		{
-			Random, Pickthis, 1, %messlist0%
-			thismess := messlist%PickThis%
-			SendInput {Raw}%thismess%
-			Send {{Text} }
-			i := 0
+			Send {Backspace}
 		}
+		SendInput {Raw}%thismess%
+		Send {{Text} }
+		i := 0
+	}
 }
 return
 
 ~n::
 {
 	if (nya) && if (LastKey = " ")
-		{
-			Send {Text}y
-			nya := !nya
-		}
+	{
+		Send {Text}y
+		nya := !nya
+	}
 }
 
 +~n::
 {
 	if (nya) && if (LastKey = " ")
-		{
-			Send {Text}Y
-			nya := !nya
+	{
+		Send {Text}Y
+		nya := !nya
+	}
 }

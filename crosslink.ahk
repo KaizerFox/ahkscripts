@@ -14,7 +14,7 @@ StringSplit, messlist, messages, `n,`r
 
 while (true)
 {
-	sleep 1500
+	sleep 750
         Random, Pickthis, 1, %messlist0%
 	sleep 100
         thismess := messlist%PickThis%

@@ -8,6 +8,7 @@ messages =
 	:16_unknown
 	:16_poor
 	:16_unsatisfactory
+	:16_excellent
 )
 
 StringSplit, messlist, messages, `n,`r

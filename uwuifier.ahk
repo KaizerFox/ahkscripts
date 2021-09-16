@@ -77,6 +77,7 @@ Pause::Suspend
 		i := 0
 	}
 }
+return
 
 ~n::
 {

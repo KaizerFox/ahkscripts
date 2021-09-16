@@ -5,9 +5,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 messages = 
 (
-:16_unknown
-:16_poor
-:16_unsatisfactory
+	:16_unknown
+	:16_poor
+	:16_unsatisfactory
 )
 
 StringSplit, messlist, messages, `n,`r

@@ -87,6 +87,7 @@ return
 		nya := !nya
 	}
 }
+return
 
 +~n::
 {
@@ -96,4 +97,38 @@ return
 		nya := !nya
 	}
 }
-; rubber ducked by cobalt
+return
+
+~u::
+{
+	if (nya) && if (LastKey = " ")
+	{
+		Send {Text}w
+		nya := !nya
+	}
+}
+return
+
++~u::
+{
+	if (nya) && if (LastKey = " ")
+	{
+		Send {Text}W
+		nya := !nya
+	}
+}
+return
+
+Enter::
+{
+	Random, Pickthis, 1, %messlist0%
+	thismess := messlist%PickThis%
+	if (thismess = "\~")
+	{
+		Send {Backspace}
+	}
+	Send {{Text} }
+	SendInput {Raw}%thismess%
+	SendInput {Enter}
+}
+return

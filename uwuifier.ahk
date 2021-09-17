@@ -5,44 +5,44 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 messages = 
 (
-	uwu
-	owo
-	*meow*
-	*nya*
-	:P
-	xd
-	>.<
-	>///<
-	-\_-
-	@\_@
-	q\_q
-	>w<
-	:3
-	;3
-	e.e
-	qwp
-	pwq
-	^w^
-	^-^
-	O.O
-	z.z
-	>.<
-	v.v
-	:d
-	=.=
-	-.-
-	O\_O
-	O\_o
-	o\_O
-	u-u
-	O-O
-	-w-
-	xp
-	x3
-	TwT
-	;-;
-	\~
-	<3
+uwu
+owo
+*meow*
+*nya*
+:P
+xd
+>.<
+>///<
+-\_-
+@\_@
+q\_q
+>w<
+:3
+;3
+e.e
+qwp
+pwq
+^w^
+^-^
+O.O
+z.z
+>.<
+v.v
+:d
+=.=
+-.-
+O\_O
+O\_o
+o\_O
+u-u
+O-O
+-w-
+xp
+x3
+TwT
+;-;
+\~
+<3
 )
 StringSplit, messlist, messages, `n,`r
 
@@ -121,11 +121,11 @@ Enter::
 {
 	Random, Pickthis, 1, %messlist0%
 	thismess := messlist%PickThis%
+	Send {{Text} }
 	if (thismess = "\~")
 	{
 		Send {Backspace}
 	}
-	Send {{Text} }
 	SendInput {Raw}%thismess%
 	SendInput {Enter}
 }

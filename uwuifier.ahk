@@ -44,21 +44,19 @@ messages =
 	\~
 	<3
 )
-
 StringSplit, messlist, messages, `n,`r
 
 i := 0
-
-Loop
-{
-	Input, LastKey, L1 V 
-}
-
 l::w
 +l::W
 r::w
 +r::W
 Pause::Suspend
+
+Loop
+{
+	Input, LastKey, L1 V 
+}
 
 ~Space::
 {
